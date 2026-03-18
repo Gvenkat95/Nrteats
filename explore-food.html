@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nrteats | Explore Restaurants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="explore-page">
+    <header id="navbar">
+        <div class="container nav-content">
+            <div class="logo-area">
+                <img src="logo.png" alt="Nrteats Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text" style="color: var(--primary);">Nrteats</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="#">Browse</a>
+                <a href="#">Orders</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-bar" style="background: #fdf5eb;">
+                    <i class="fas fa-search" style="color: var(--primary);"></i>
+                    <input type="text" placeholder="Find biryani, dosa...">
+                </div>
+                <button class="theme-toggle"><i class="far fa-moon"></i></button>
+                <a href="admin.html" class="admin-btn">Admin</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container explore-container">
+        <div class="explore-header-area">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
+            <h1 class="explore-page-title">Explore Restaurants</h1>
+            
+            <div class="info-banner">
+                <i class="fas fa-thumbtack"></i> Click on the Restaurant name to view Menu items.
+            </div>
+        </div>
+
+        <div class="explore-list">
+            <div class="explore-card">
+                <h3>Vall Biryani</h3>
+                <p>11:00 AM - 5:00 PM</p>
+            </div>
+            
+            <div class="explore-card">
+                <h3>Annapurna Meals</h3>
+                <p>11:30 AM - 2:00 PM</p>
+            </div>
+            
+            <div class="explore-card">
+                <h3>Madeena Fast Food Centre</h3>
+                <p>11:30 AM - 11:00 PM</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

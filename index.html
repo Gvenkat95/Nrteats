@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nrteats | Local Cravings, Direct Connection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="container nav-content">
+            <div class="logo-area">
+                <img src="logo.png" alt="Nrteats Logo" class="logo-img">
+                <span class="logo-text">Nrteats</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="active">Home</a>
+                <a href="#">Browse</a>
+                <a href="#">Orders</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Find biryani, dosa...">
+                </div>
+                <button class="theme-toggle"><i class="far fa-moon"></i></button>
+                <a href="admin.html" class="admin-btn">Admin</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-image-overlay"></div>
+                <div class="hero-content">
+                    <div class="tech-badge">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        NRT'S TECH-ENABLED DINING
+                    </div>
+                    <h1 class="hero-title">Local Cravings, <br><span>Direct Connection.</span></h1>
+                    <p class="hero-subtitle">No middleman, just great food. Browse menus and order directly via WhatsApp or Call.</p>
+
+                    <div class="hero-buttons">
+                        <button class="explore-btn food" id="explore-food">
+                            <i class="far fa-compass"></i>
+                            Explore Food
+                        </button>
+                        <button class="explore-btn tiffins" id="explore-tiffins">
+                            <i class="fas fa-box-open"></i>
+                            Explore Tiffins
+                        </button>
+                        <button class="explore-btn bakery" id="explore-bakery">
+                            <i class="fas fa-bread-slice"></i>
+                            Explore Bakery Items
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurant-list">
+            <h2 class="section-title">Best Food In Narasaraopet</h2>
+
+            <div class="restaurants-grid" id="restaurants-grid">
+                <div class="res-card" onclick="placeMockOrder('RK Restaurant', '1x Chicken Dum Biryani, 1x Coke', 350)">
+                    <div class="res-image-container">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&q=80&w=600"
+                            alt="Biryani Point">
+                        <span class="res-tag">PRO OFFERS</span>
+                    </div>
+                    <div class="res-details">
+                        <div class="res-row">
+                            <h3 class="res-name">RK Restaurant</h3>
+                            <span class="res-rating">4.2 <i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="res-row">
+                            <p class="res-cuisine">North Indian, Mughlai, Tandoori</p>
+                            <span class="res-price">₹250 for one</span>
+                        </div>
+                        <div class="res-delivery-time">32 min</div>
+                    </div>
+                </div>
+
+                <div class="res-card">
+                    <div class="res-image-container">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+                            alt="Pizza Hub">
+                        <span class="res-tag">10% OFF</span>
+                    </div>
+                    <div class="res-details">
+                        <div class="res-row">
+                            <h3 class="res-name">Bilal Biryani Point</h3>
+                            <span class="res-rating">4.5 <i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="res-row">
+                            <p class="res-cuisine">Biryani, Hyderabadi, Fast Food</p>
+                            <span class="res-price">₹300 for one</span>
+                        </div>
+                        <div class="res-delivery-time">25 min</div>
+                    </div>
+                </div>
+
+                <div class="res-card">
+                    <div class="res-image-container">
+                        <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&q=80&w=600"
+                            alt="South Spice">
+                    </div>
+                    <div class="res-details">
+                        <div class="res-row">
+                            <h3 class="res-name">Subhani Biryani Point</h3>
+                            <span class="res-rating">4.0 <i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="res-row">
+                            <p class="res-cuisine">Biryani, Andhra, South Indian</p>
+                            <span class="res-price">₹150 for one</span>
+                        </div>
+                        <div class="res-delivery-time">20 min</div>
+                    </div>
+                </div>
+            </div>
+            -
+        </section>
+
+        <section class="how-it-works">
+            <div class="divider">
+                <span class="dot"></span>
+            </div>
+
+            <div class="works-grid">
+                <div class="work-step">
+                    <div class="icon-circle">
+                        <i class="fas fa-arrow-pointer"></i>
+                    </div>
+                    <h3>CHOOSE YOUR FAVORITE</h3>
+                    <p>Choose your favorite meals and order online or by phone. It's easy to customize your order.</p>
+                </div>
+
+                <div class="work-step">
+                    <div class="icon-circle">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>WE DELIVER YOUR MEALS</h3>
+                    <p>We prepared and delivered meals arrive at your door. Duis autem vel eum iriure dolor in hendrerit
+                        in vulputate.</p>
+                </div>
+
+                <div class="work-step">
+                    <div class="icon-circle">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>EAT AND ENJOY</h3>
+                    <p>No shooping, no cooking, no counting and no cleaning. Enjoy your healthy meals with your family.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

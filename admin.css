@@ -1,0 +1,433 @@
+/* admin.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --admin-primary: #F68B1E;
+    --admin-secondary: #2c3e50;
+    --admin-bg: #f4f6f9;
+    --admin-surface: #ffffff;
+    --admin-text: #333333;
+    --admin-text-light: #777777;
+    --admin-border: #e2e8f0;
+    
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --info: #3498db;
+}
+
+body.admin-body {
+    background-color: var(--admin-bg);
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    color: var(--admin-text);
+    overflow-x: hidden;
+}
+
+/* Login Overlay */
+.admin-login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--admin-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 20px;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    color: var(--admin-secondary);
+}
+
+.login-box p {
+    color: var(--admin-text-light);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--admin-border);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.login-box input:focus {
+    border-color: var(--admin-primary);
+}
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    background: var(--admin-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-box button:hover {
+    background: #e07a16;
+}
+
+.error-msg {
+    color: var(--danger) !important;
+    margin-top: 15px;
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+    min-height: 20px;
+}
+
+/* Layout Container */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 260px;
+    background: var(--admin-surface);
+    border-right: 1px solid var(--admin-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.admin-brand {
+    padding: 25px 20px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--admin-primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 25px;
+    color: var(--admin-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background: rgba(246, 139, 30, 0.1);
+    color: var(--admin-primary);
+    border-right: 3px solid var(--admin-primary);
+}
+
+.sidebar-nav a i {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--danger);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Main Content */
+.admin-main {
+    flex: 1;
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-header {
+    background: var(--admin-surface);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--admin-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.header-title p {
+    color: var(--admin-text-light);
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.refresh-btn {
+    background: #f1f5f9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--admin-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+    background: #e2e8f0;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 30px 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: var(--admin-surface);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--admin-border);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.bg-blue { background: rgba(52, 152, 219, 0.1); color: var(--info); }
+.bg-orange { background: rgba(243, 156, 18, 0.1); color: var(--warning); }
+.bg-green { background: rgba(46, 204, 113, 0.1); color: var(--success); }
+.bg-purple { background: rgba(155, 89, 182, 0.1); color: #9b59b6; }
+
+.stat-details p {
+    color: var(--admin-text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.stat-details h3 {
+    font-size: 1.8rem;
+    color: var(--admin-secondary);
+}
+
+/* Orders Section */
+.orders-section {
+    background: var(--admin-surface);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--admin-border);
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h3 {
+    font-size: 1.2rem;
+    color: var(--admin-secondary);
+}
+
+.filter-group select {
+    padding: 8px 15px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    color: var(--admin-text);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table th, .orders-table td {
+    padding: 15px 25px;
+    text-align: left;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.orders-table th {
+    background: #f8fafc;
+    color: var(--admin-text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.orders-table td {
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.order-id {
+    font-weight: 700;
+    color: var(--admin-secondary);
+}
+
+.customer-info strong {
+    display: block;
+    color: var(--admin-secondary);
+    margin-bottom: 3px;
+}
+
+.customer-info span {
+    color: var(--admin-text-light);
+    font-size: 0.85rem;
+}
+
+.items-list {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--admin-text-light);
+}
+
+.order-total {
+    font-weight: 700;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.status-badge.pending {
+    background: rgba(243, 156, 18, 0.1);
+    color: var(--warning);
+}
+
+.status-badge.preparing {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--info);
+}
+
+.status-badge.delivered {
+    background: rgba(46, 204, 113, 0.1);
+    color: var(--success);
+}
+
+.status-badge.cancelled {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--danger);
+}
+
+/* Actions */
+.action-select {
+    padding: 6px 10px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.action-select:focus {
+    border-color: var(--admin-primary);
+}
